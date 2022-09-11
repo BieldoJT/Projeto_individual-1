@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    font-size: 17px;
+}
+
+
+
+.myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.texto{
+    position: absolute;
+    top: 200px;
+    right: 500px;
+    font-size:medium;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    background: rgba(0,0,0,0.5);
+}
+
+
+    
+    
+
+.fade{
+    opacity:1;
+    padding: 20px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+    top: 525px;
+    right: 560px;
+    
+}
+.fade:hover
+{
+    opacity:0.75;
+    border-radius:50%;
+    box-shadow:
+        1px 1px #53a7ea,
+        2px 2px #53a7ea,
+        3px 3px #53a7ea;
+-webkit-transform: translateX(-3px);
+transform: translateX(-3px);
+}
+
+.fade button{
+    padding: 0px;
+    color: white;
+    background-color: black;
+}
