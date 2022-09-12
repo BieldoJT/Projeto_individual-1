@@ -17,7 +17,7 @@ body {
 .texto{
     position: absolute;
     top: 200px;
-    right: 500px;
+    width: 100%;
     font-size:medium;
     text-align: center;
     color: white;
@@ -27,17 +27,19 @@ body {
 
 
     
-    
+ 
+
+
+
+
 
 .fade{
     opacity:1;
     padding: 20px;
-    border: 1px solid #000;
-    border-radius: 50%;
-    background-color: black;
+    border-radius:50%;
     position: absolute;
-    top: 525px;
-    right: 560px;
+    text-align: center;
+    
     
 }
 .fade:hover
@@ -52,8 +54,11 @@ body {
 transform: translateX(-3px);
 }
 
-.fade button{
-    padding: 0px;
+button{
+    padding: 20px;
+    border-radius:50%;
     color: white;
     background-color: black;
+    top: 70%;
+    width: 100%
 }
