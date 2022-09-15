@@ -1,3 +1,4 @@
+@media (max-width: 300px){   }
 body {
     margin: 0;
     background-color: rgb(238, 228, 228);
@@ -12,7 +13,7 @@ body {
 ul{
     list-style-type: none;
     margin-left: 0;
-    margin-top: 100px;
+    margin-top: 50px;
     padding: 0;
     width: 13%;
     background-color: #ffffff;
@@ -71,32 +72,45 @@ div{
     justify-content: flex-end;
     background-color: black;
     opacity: 0.5;
-    width: 75%;
-    height: 400px;
+    width: 80%;
+    max-height: auto;
     border: 3px solid green;
     margin-left: 220px;
-    margin-top: 0;
+    margin-top: 100px;
     
 }
 
 .apresentacao1{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
-    padding: 10px;
+    padding: 5px;
     width: 98%;
-    height: 50%;
+    height: auto;
 }
 
 #minha-foto{
+    text-align:center;
     padding: 5px;
-    width: 30%;
-    height:auto;
+    height: auto;
 }
 
+#minha-foto img{
+    border: 5px solid rgba(18, 18, 189, 0.801);
+    border-radius: 40%;
+    max-width:230px;
+    max-height:230px;
+    width: auto;
+    height: auto;
+}
+
+
+
 #texto-foto{
+    text-align: left;
     padding: 5px;
-    width: 70%;
+    width:auto;
+    height: auto;
 
 }
 
@@ -122,3 +136,70 @@ div{
     margin-top: 0;
     padding: 10px;
 }
+
+.topicos{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.topicos > #Foto-quem_perdoa{text-align: center;}
+
+#Foto-quem_perdoa img{    
+    max-height: 500px;
+    max-width: 300px ;
+    width: auto;
+    height: auto;
+}
+
+.topicos > #maçã{text-align: center;}
+
+#maçã img{
+    max-height: 500px;
+    max-width: 300px ;
+    width: auto;
+    height: auto;
+}
+
+#texto_foguete{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+#texto_foguete #foguete-decolando{
+    background-color: black;
+    
+}
+
+
+#texto_foguete #foguete-decolando img{
+    max-width: 75px;
+    max-height: 100px;
+    width: auto;
+    height: auto;
+    text-align: center;
+    position: relative;
+    animation-name: decolagem;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-play-state: running;   
+}
+
+@media only screen and (max-width: 500px){   
+#texto_foguete #foguete-decolando img{
+    display: none;
+}
+
+}
+
+
+
+@keyframes decolagem {
+    0% {transform:rotate(0);left: 0px;}
+    100% {transform:rotate(-60deg);left: 500px;}
+}
+
+
+
+
+
