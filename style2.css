@@ -1,9 +1,30 @@
-@media (max-width: 300px){   }
+@media only screen and (max-width: 700px){   
+    #texto_foguete #foguete-decolando img{
+        display: none;
+    }
+    #img-foguete_falhando img{
+        display: none;
+    }
+
+    
+}
+@media only screen and (max-width: 1350px){
+    #cf {
+        display: none;
+      }
+
+    #cf img {
+        display: none;
+    }
+}
+
+
 body {
     margin: 0;
     background-color: rgb(238, 228, 228);
     background-image: url(images/Astronaut-Desktop-Image.jpg);
     background-position:auto 100%;
+    background-attachment: fixed;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 17px;
     color: #ffffff;
@@ -12,13 +33,15 @@ body {
 /*Navegador - inicio*/
 ul{
     list-style-type: none;
-    margin-left: 0;
-    margin-top: 50px;
+    margin-left: auto;
+    margin-top: 40px;
     padding: 0;
-    width: 13%;
+    max-width: 150px;
+    width: 15%;
     background-color: #ffffff;
     border-radius: 10%;
-    height: 71%;
+    max-height: 510px;
+    height: 80%;
     position: fixed;
     overflow: auto;
 }
@@ -42,7 +65,7 @@ li.conteudo{
     display: none;
     position: absolute;
     background-color: green;
-    min-width: 160px;
+    min-width: 140px;
     z-index: 1;
 }
 
@@ -61,10 +84,10 @@ li.conteudo{
 }
 /*NAvegador - fim*/
 
-
 div{
     border: 1px solid #ffffff;
 }
+
 
 .cabecalho{
     display: flex;
@@ -173,8 +196,8 @@ div{
 
 
 #texto_foguete #foguete-decolando img{
-    max-width: 75px;
-    max-height: 100px;
+    max-width: 150px;
+    max-height: 150px;
     width: auto;
     height: auto;
     text-align: center;
@@ -185,12 +208,7 @@ div{
     animation-play-state: running;   
 }
 
-@media only screen and (max-width: 500px){   
-#texto_foguete #foguete-decolando img{
-    display: none;
-}
 
-}
 
 
 
@@ -199,6 +217,93 @@ div{
     100% {transform:rotate(-60deg);left: 500px;}
 }
 
+#texto-imagem{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+.titulo-topico{
+    text-align: left;
+    padding-top: 5%;
+}
+
+
+#img-foguete_falhando{
+    background-color: black;
+    width: 40%;
+}
+
+#img-foguete_falhando img{
+    max-width: 200px;
+    max-height: 200px;
+    width: auto;
+    height: auto;
+}
+
+.textos > #cf{
+    text-align: center;
+}
+
+#cf {
+    width:70%;
+    height:350px;
+    position:relative;
+    overflow:hidden;
+    background-color: black;
+  }
+
+
+#cf img {
+    position:absolute;
+    top:auto; left:auto;
+    max-width:400px;
+    max-height: 400px;
+    height: auto;
+    width: auto;
+    animation-name: cfFadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 42s;
+}
+  
+@keyframes cfFadeInOut {
+    0% {opacity:1;}
+    14% {opacity:1;}
+    17% {opacity:0;}
+    98% {opacity:0;}
+    100% {opacity:1;}
+}
+  
+#cf img:nth-of-type(1) {
+    animation-delay: 35s;
+
+}
+
+#cf img:nth-of-type(2) {
+    animation-delay: 28s;
+}
+#cf img:nth-of-type(3) {
+    animation-delay: 21s;
+}
+#cf img:nth-of-type(4) {
+    animation-delay: 14s;
+}
+#cf img:nth-of-type(5) {
+    animation-delay: 7s;
+}
+#cf img:nth-of-type(6) {
+    animation-delay: 0s;
+}
+
+#div_gif{ 
+    width: 100%;
+    text-align: center;  
+}
+#dif_gif #gif-quase_faleci{
+    width: 100%;
+    height: auto;
+}
 
 
 
