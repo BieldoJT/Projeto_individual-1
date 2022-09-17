@@ -145,7 +145,6 @@ body {
 
 
 .textos{
-  border: 3px solid red;
   display: flex;
   flex-wrap: wrap;
   background-color: black;
