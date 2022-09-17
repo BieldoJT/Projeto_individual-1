@@ -1,0 +1,306 @@
+
+@media only screen and (max-width: 700px){   
+  #texto_foguete #foguete-decolando img{
+    display: none;
+}
+  #img-foguete_falhando img{
+    display: none;
+}
+}
+
+@media only screen and (max-width: 1350px){
+  #cf {display: none;}
+
+  #cf img {display: none;}
+}
+
+@media only screen and (max-width: 600px){
+  #div_gif{ 
+    display: none;  
+  }
+  #dif_gif #gif-quase_faleci{
+    display: none;
+  }
+
+}
+
+
+body {
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    font-size: 17px;
+  }
+  details {
+    margin: 40px;
+  }
+  summary {
+    writing-mode: vertical-lr;
+    text-align: center;
+    padding: 12px 10px;
+    width: 23px;
+    height: 17px;
+    background-color: #232526;
+    border: 2px solid #bdc3c7;
+    border-radius: 4px;
+    color:  #bdc3c7;
+    cursor: pointer;
+    user-select: none;
+    outline: none;
+    transition: transform 200ms ease-in-out 0s;
+  }
+  summary::before,
+  summary::after {
+    position: static;
+    top: 0;
+    left: 0;
+  }
+  summary::before {
+    content: "";
+  }
+  summary::after {
+    content: "III";
+    letter-spacing: -1px;
+  }
+  summary:hover {
+    transform: scale(1.1);
+  }
+  summary::marker {
+    font-size: 0;
+  }
+  summary::-webkit-details-marker {
+    display: none;
+  }
+  details[open] .menu {
+    animation-name: menuAnim;
+  }
+  details[open] summary::before {
+    content: "X";
+  }
+  details[open] summary::after {
+    content: "";
+  }
+  .menu {
+    height: 0;
+    width: fit-content;
+    border-radius: 4px;
+    background-color: #232526;
+    box-shadow: 0 4px 12px 0 rgba(253, 252, 252, 0.445);
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    animation: closeMenu 300ms ease-in-out forwards;
+  }
+  .menu a {
+    padding: 12px 24px;
+    margin: 0 16px;
+    color: #bdc3c7;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    text-align: center;
+    transition: filter 200ms linear 0s;
+  }
+  .menu a:nth-of-type(1) {
+    padding-top: 24px;
+  }
+  .menu a:nth-last-of-type(1) {
+    border-bottom: none;
+  }
+  .menu a:hover {
+    filter: brightness(200%);
+  }
+  details::before {
+    content: "Menu";
+    color: #bdc3c7;
+    position: absolute;
+    margin-left: 50px;
+    padding: 10px 10px;
+    opacity: 0.4;
+  }
+  details[open]::before {
+    animation: fadeMe 300ms linear forwards;
+  }
+  @keyframes menuAnim {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 312px;
+    }
+  }
+  @keyframes fadeMe {
+    0% {
+      opacity: 0.4;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+
+
+
+
+
+.textos{
+  border: 3px solid red;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: black;
+  opacity: 0.5;
+  width: 75%;
+  height: auto;
+  margin-left: 140px;
+  margin-top: 0;
+  padding: 10px;
+}
+
+.topicos{
+  padding: 10px;
+  text-align: justify;
+  display: flex;
+  justify-content:center ;
+  flex-direction: column;
+  border-bottom: 1px solid #ffffff;
+}
+
+.topicos > #Foto-quem_perdoa{text-align: center;}
+
+#Foto-quem_perdoa img{    
+  max-height: 500px;
+  max-width: 300px ;
+  width: auto;
+  height: auto;
+}
+
+.topicos > #maçã{text-align: center;}
+
+#maçã img{
+  max-height: 500px;
+  max-width: 300px ;
+  width: auto;
+  height: auto;
+}
+
+#texto_foguete{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+#texto_foguete #foguete-decolando{
+  background-color: black;
+  
+}
+
+
+#texto_foguete #foguete-decolando img{
+  max-width: 150px;
+  max-height: 150px;
+  width: auto;
+  height: auto;
+  text-align: center;
+  position: relative;
+  animation-name: decolagem;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-play-state: running;   
+}
+
+
+
+
+
+@keyframes decolagem {
+  0% {transform:rotate(0);left: 0px;}
+  100% {transform:rotate(-60deg);left: 485px;}
+}
+
+#texto-imagem{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+.titulo-topico{
+  text-align: left;
+  padding-top: 5%;
+}
+
+
+#img-foguete_falhando{
+  background-color: black;
+  width: 40%;
+}
+
+#img-foguete_falhando img{
+  max-width: 200px;
+  max-height: 200px;
+  width: auto;
+  height: auto;
+}
+
+.textos > #cf{
+  text-align: center;
+}
+
+#cf {
+  width:70%;
+  height:350px;
+  position:relative;
+  overflow:hidden;
+  background-color: black;
+}
+
+
+#cf img {
+  position:absolute;
+  top:auto; left:auto;
+  max-width:400px;
+  max-height: 400px;
+  height: auto;
+  width: auto;
+  animation-name: cfFadeInOut;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 42s;
+}
+
+@keyframes cfFadeInOut {
+  0% {opacity:1;}
+  14% {opacity:1;}
+  17% {opacity:0;}
+  98% {opacity:0;}
+  100% {opacity:1;}
+}
+
+#cf img:nth-of-type(1) {
+  animation-delay: 35s;
+
+}
+
+#cf img:nth-of-type(2) {
+  animation-delay: 28s;
+}
+#cf img:nth-of-type(3) {
+  animation-delay: 21s;
+}
+#cf img:nth-of-type(4) {
+  animation-delay: 14s;
+}
+#cf img:nth-of-type(5) {
+  animation-delay: 7s;
+}
+#cf img:nth-of-type(6) {
+  animation-delay: 0s;
+}
+
+#div_gif{ 
+  width: 100%;
+  text-align: center;  
+}
+#dif_gif #gif-quase_faleci{
+  width: 100%;
+  height: auto;
+}
